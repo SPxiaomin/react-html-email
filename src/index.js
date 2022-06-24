@@ -2,6 +2,7 @@ import PropTypes, { configStyleValidator, styleValidator } from './PropTypes'
 import Box from './components/Box'
 import Email from './components/Email'
 import Image from './components/Image'
+import RowItem from './components/RowItem'
 import Item from './components/Item'
 import Span from './components/Span'
 import A from './components/A'
@@ -18,6 +19,7 @@ export {
   Box,
   Email,
   Image,
+  RowItem,
   Item,
   Span,
   A,

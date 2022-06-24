@@ -5,18 +5,16 @@ import includeDataProps from '../includeDataProps'
 
 export default function Item(props) {
   return (
-    <tr>
-      <td
-        {...includeDataProps(props)}
-        className={props.className}
-        align={props.align}
-        valign={props.valign}
-        bgcolor={props.bgcolor}
-        style={props.style}
-      >
-        {props.children}
-      </td>
-    </tr>
+    <td
+      {...includeDataProps(props)}
+      className={props.className}
+      align={props.align}
+      valign={props.valign}
+      bgcolor={props.bgcolor}
+      style={props.style}
+    >
+      {props.children}
+    </td>
   )
 }
 

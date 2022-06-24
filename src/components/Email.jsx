@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import EmailPropTypes from '../PropTypes'
 import Box from './Box'
 import Item from './Item'
+import RowItem from './RowItem'
 
 // inspired by http://htmlemailboilerplate.com
 export default function Email(props) {
@@ -26,11 +27,13 @@ export default function Email(props) {
         }}
       >
         <Box width="100%" height="100%" bgcolor={props.bgcolor}>
-          <Item align={props.align} valign={props.valign}>
-            <Box width={props.width} align="center" cellPadding={props.cellPadding} cellSpacing={props.cellSpacing} style={props.style}>
-              {props.children}
-            </Box>
-          </Item>
+          <RowItem>
+            <Item align={props.align} valign={props.valign}>
+              <Box width={props.width} align="center" cellPadding={props.cellPadding} cellSpacing={props.cellSpacing} style={props.style}>
+                {props.children}
+              </Box>
+            </Item>
+          </RowItem>
         </Box>
       </body>
     </html>
