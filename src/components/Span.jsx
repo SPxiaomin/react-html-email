@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import EmailPropTypes from '../PropTypes'
 import includeDataProps from '../includeDataProps'
+import A from './A'
 
 export default function Span(props) {
   const lineHeight = props.lineHeight !== undefined ? props.lineHeight : props.fontSize
@@ -20,19 +21,26 @@ export default function Span(props) {
           textAlign: props.textAlign,
         }}
       >
-        <span
-          {...includeDataProps(props)}
+        <A
+          href={props.link}
           style={{
-            fontFamily: props.fontFamily,
-            fontSize: props.fontSize,
-            fontWeight: props.fontWeight,
-            lineHeight: `${lineHeight}px`,
-            color: props.color,
-            ...props.style,
+            display: 'block',
           }}
         >
-          {props.children}
-        </span>
+          <span
+            {...includeDataProps(props)}
+            style={{
+              fontFamily: props.fontFamily,
+              fontSize: props.fontSize,
+              fontWeight: props.fontWeight,
+              lineHeight: `${lineHeight}px`,
+              color: props.color,
+              ...props.style,
+            }}
+          >
+            {props.children}
+          </span>
+        </A>
       </div>
     </div>
   )

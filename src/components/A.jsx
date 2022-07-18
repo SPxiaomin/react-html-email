@@ -4,6 +4,10 @@ import EmailPropTypes from '../PropTypes'
 import includeDataProps from '../includeDataProps'
 
 export default function A(props) {
+  if (!props.href) {
+    return props.children
+  }
+
   return (
     <a
       {...includeDataProps(props)}
@@ -12,7 +16,7 @@ export default function A(props) {
       target="_blank"
       style={{
         color: props.color,
-        textDecoration: props.textDecoration,
+        // textDecoration: props.textDecoration,
         ...props.style,
       }}
     >

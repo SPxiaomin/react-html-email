@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import EmailPropTypes from '../PropTypes'
 import includeDataProps from '../includeDataProps'
+import A from './A'
 
 export default function Image(props) {
   let divStyle = {}
@@ -23,20 +24,27 @@ export default function Image(props) {
     <div
       style={divStyle}
     >
-      <img
-        {...includeDataProps(props)}
-        alt={props.alt}
-        src={props.src}
-        width={props.width}
-        height={props.height}
+      <A
+        href={props.link}
         style={{
           display: 'block',
-          outline: 'none',
-          border: 'none',
-          textDecoration: 'none',
-          ...props.style,
         }}
-      />
+      >
+        <img
+          {...includeDataProps(props)}
+          alt={props.alt}
+          src={props.src}
+          width={props.width}
+          height={props.height}
+          style={{
+            display: 'block',
+            outline: 'none',
+            border: 'none',
+            textDecoration: 'none',
+            ...props.style,
+          }}
+        />
+      </A>
     </div>
   )
 }
