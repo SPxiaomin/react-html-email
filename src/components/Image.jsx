@@ -32,8 +32,8 @@ export default function Image(props) {
       >
         <img
           {...includeDataProps(props)}
-          alt={props.alt}
           src={props.src}
+          alt={''}
           width={props.width}
           height={props.height}
           style={{
