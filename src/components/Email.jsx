@@ -26,15 +26,24 @@ export default function Email(props) {
           ...props.bodyStyle,
         }}
       >
-        <Box width="100%" height="100%" bgcolor={props.bgcolor}>
-          <RowItem>
-            <Item align={props.align} valign={props.valign}>
-              <Box width={props.width} align="center" cellPadding={props.cellPadding} cellSpacing={props.cellSpacing} style={props.style}>
-                {props.children}
-              </Box>
-            </Item>
-          </RowItem>
-        </Box>
+        <table
+          width="100%"
+          height="100%"
+          cellPadding="0"
+          cellSpacing="0"
+          border="0"
+          bgcolor={props.bgcolor}
+        >
+          <tbody>
+            <RowItem>
+              <Item align={props.align} valign={props.valign}>
+                <Box width={props.width} align="center" cellPadding={props.cellPadding} cellSpacing={props.cellSpacing} style={props.style}>
+                  {props.children}
+                </Box>
+              </Item>
+            </RowItem>
+          </tbody>
+        </table>
       </body>
     </html>
   )
