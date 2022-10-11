@@ -5,6 +5,7 @@ import Image from './components/Image'
 import RowItem from './components/RowItem'
 import Item from './components/Item'
 import Span from './components/Span'
+import Text from './components/Text'
 import A from './components/A'
 import renderEmail from './renderEmail'
 
@@ -22,6 +23,7 @@ export {
   RowItem,
   Item,
   Span,
+  Text,
   A,
   configStyleValidator,
   renderEmail,
