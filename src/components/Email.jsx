@@ -26,6 +26,21 @@ export default function Email(props) {
           ...props.bodyStyle,
         }}
       >
+        <span
+          className="preheader"
+          style={{
+            color: 'transparent',
+            display: 'none',
+            height: 0,
+            maxHeight: 0,
+            maxWidth: 0,
+            opacity: 0,
+            overflow: 'hidden',
+            msoHide: 'all',
+            visibility: 'hidden',
+            width: 0,
+          }}
+        >{props.digest}</span>
         <table
           width="100%"
           height="100%"
@@ -52,6 +67,7 @@ export default function Email(props) {
 Email.propTypes = {
   lang: PropTypes.string,
   title: PropTypes.string.isRequired,
+  digest: PropTypes.string,
   bgcolor: PropTypes.string,
   cellPadding: PropTypes.number,
   cellSpacing: PropTypes.number,
@@ -65,6 +81,7 @@ Email.propTypes = {
 }
 
 Email.defaultProps = {
+  digest: '',
   lang: 'en',
   width: '600',
   align: 'center',

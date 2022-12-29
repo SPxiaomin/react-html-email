@@ -17,8 +17,7 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "compile": "babel -d lib/ src/ && cp -v src/supportMatrix.json lib/",
-    "scrape": "babel-node scripts/scrapeStyleSupport.js > src/supportMatrix.json",
-    "prepare": "npm run compile"
+    "scrape": "babel-node scripts/scrapeStyleSupport.js > src/supportMatrix.json"
   },
   "main": "lib/index.js",
   "repository": "chromakode/react-html-email",
